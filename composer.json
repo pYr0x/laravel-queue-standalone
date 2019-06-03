@@ -1,11 +1,11 @@
 {
-    "name": "jk/queue",
-    "description": "description_text",
+    "name": "twentytwo/queue-test",
+    "description": "laravels redis queue standalone",
     "minimum-stability": "dev",
     "license": "proprietary",
     "authors": [
         {
-            "name": "author's name",
+            "name": "Julian Kern",
             "email": "email@example.com"
         }
     ],
@@ -16,10 +16,13 @@
     },
     "autoload": {
         "psr-4": {
-            "Jobs\\": "Jobs/"
+            "twentytwo\\": "twentytwo/",
+            "app\\": "applications/"
         }
     },
     "require": {
+        "php-di/php-di": "^6.0.2",
+        "acclimate/container": "dev-master",
         "illuminate/redis": "5.5.x-dev",
         "illuminate/queue": "5.5.x-dev",
         "illuminate/encryption": "5.5.x-dev",

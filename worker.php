@@ -7,12 +7,14 @@ use Illuminate\Events\Dispatcher;
 use Illuminate\Queue\Worker;
 use Illuminate\Queue\WorkerOptions;
 
-$queue = require __DIR__ . '/queue.php';
+require "init.php";
 
-$container     = $capsule->getContainer();
-$dispatcher = new Dispatcher($container);
+// start redis
+app('redis');
 
-$worker = new Worker($queue->getQueueManager(), $dispatcher);
+$dispatcher = new Dispatcher(app('laravel'));
+
+$worker = new Worker(app('redis.queue.capsule')->getQueueManager(), $dispatcher);
 $connection = 'default';
 $queue = NULL;
 $delay = 0;

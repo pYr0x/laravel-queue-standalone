@@ -1,5 +1,5 @@
 <?php
-namespace Jobs\Bus;
+namespace twentytwo\foundation\bus;
 
 class PendingChain
 {
@@ -30,7 +30,7 @@ class PendingChain
   /**
    * Dispatch the job with the given arguments.
    *
-   * @return \Jobs\Bus\PendingDispatch
+   * @return \twentytwo\foundation\bus\PendingDispatch
    */
   public function dispatch()
   {

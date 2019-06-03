@@ -1,7 +1,10 @@
 <?php
-use Illuminate\Container\Container as IlluminateContainer;
 
-class Container extends IlluminateContainer {
+namespace twentytwo;
+
+use Illuminate\Container\Container;
+
+class BaseContainer extends Container {
 
   /**
    * Determine if the application is in maintenance mode.

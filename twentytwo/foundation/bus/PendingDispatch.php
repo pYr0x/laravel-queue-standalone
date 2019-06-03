@@ -1,8 +1,6 @@
 <?php
-namespace Jobs\Bus;
-
+namespace twentytwo\foundation\bus;
 use Illuminate\Contracts\Bus\Dispatcher;
-
 class PendingDispatch
 {
   /**
@@ -94,7 +92,6 @@ class PendingDispatch
    */
   public function __destruct()
   {
-    global $container;
-    $container->get(Dispatcher::class)->dispatch($this->job);
+    app(Dispatcher::class)->dispatch($this->job);
   }
 }
