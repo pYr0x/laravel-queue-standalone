@@ -1,0 +1,31 @@
+{
+    "name": "jk/queue",
+    "description": "description_text",
+    "minimum-stability": "dev",
+    "license": "proprietary",
+    "authors": [
+        {
+            "name": "author's name",
+            "email": "email@example.com"
+        }
+    ],
+    "config": {
+        "platform": {
+            "php": "7.0.33"
+        }
+    },
+    "autoload": {
+        "psr-4": {
+            "Jobs\\": "Jobs/"
+        }
+    },
+    "require": {
+        "illuminate/redis": "5.5.x-dev",
+        "illuminate/queue": "5.5.x-dev",
+        "illuminate/encryption": "5.5.x-dev",
+        "illuminate/bus": "5.5.x-dev",
+        "illuminate/support": "5.5.x-dev",
+        "illuminate/events": "5.5.x-dev",
+        "predis/predis": "^1.1"
+    }
+}
